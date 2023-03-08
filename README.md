@@ -10,7 +10,7 @@ in the root directory
 npm install
 touch .env
 ```
-Add the folloding to the .env file
+Add the folloding to the .env file and adjust accordingly
 
 ```
 
@@ -32,7 +32,7 @@ touch .env
 
 ```
 
-Add the folloding to the .env file
+Add the folloding to the .env file and adjust accordingly
 
 ```
 
