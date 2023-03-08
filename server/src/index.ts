@@ -3,6 +3,10 @@ import express from "express";
 import morgan from 'morgan';
 import cors from 'cors';
 
+// load .env data into process.env
+require('dotenv').config();
+
+const PORT = process.env.PORT || 8040;
 const app = express();
 
 // Allows for X-site requests
@@ -18,7 +22,6 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 
-
-app.listen(8040, () => {
-  console.log(`server listening on http://localhost: 8040`);
+app.listen(PORT, () => {
+  console.log(`server listening on http://localhost: ${PORT}`);
 })
