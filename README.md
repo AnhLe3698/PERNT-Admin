@@ -14,7 +14,7 @@ Add the folloding to the .env file
 
 ```json
 
-PORT=8080
+PORT=portnumber-8080
 
 ```
 
@@ -41,7 +41,7 @@ DB_USER=username
 DB_PASS=password
 DB_NAME=dn_name
 DB_PORT=db_port
-PORT=8040
+PORT=portnumber-8040
 
 ```
 
