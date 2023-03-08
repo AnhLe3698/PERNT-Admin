@@ -12,7 +12,7 @@ touch .env
 ```
 Add the folloding to the .env file
 
-```json
+```
 
 PORT=portnumber-8080
 
@@ -34,7 +34,7 @@ touch .env
 
 Add the folloding to the .env file
 
-```json
+```
 
 DB_HOST=localhost
 DB_USER=username
