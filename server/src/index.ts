@@ -1,12 +1,15 @@
-// const express = require('express');
 import express from "express";
 import morgan from 'morgan';
 import cors from 'cors';
+import {config} from 'dotenv';
+// Import our router
+import router from './routes/routes'
 
 // load .env data into process.env
-require('dotenv').config();
+// require().config();
+config();
 
-const PORT = process.env.PORT || 8040;
+const PORT = process.env.PORT || 8020;
 const app = express();
 
 // Allows for X-site requests
@@ -18,15 +21,16 @@ app.use(morgan('dev'))
 // Allows for JSOn to be sent in the request body without stringifying it explicitly
 app.use(express.json())
 
-// qury strings can be added to the header amd emcoded properly
+// query strings can be added to the header amd emcoded properly
 app.use(express.urlencoded({extended: true}))
 
-
+// Initialize listener
 app.listen(PORT, () => {
   console.log(`server listening on http://localhost: ${PORT}`);
 })
 
+app.use('/api', router)
+
 app.get('/', (req, res) => {
-  const legoMyego = 's';
-  res.send('hello worlds');
+  res.send('hello world');
 })
