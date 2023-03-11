@@ -25,3 +25,8 @@ app.use(express.urlencoded({extended: true}))
 app.listen(PORT, () => {
   console.log(`server listening on http://localhost: ${PORT}`);
 })
+
+app.get('/', (req, res) => {
+  const legoMyego = 's';
+  res.send('hello worlds');
+})
