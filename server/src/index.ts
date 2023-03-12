@@ -1,13 +1,15 @@
+// load .env data into process.env
+// require('dotenv').config();
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 import express from "express";
 import morgan from 'morgan';
 import cors from 'cors';
-import {config} from 'dotenv';
+
 // Import our router
 import router from './routes/routes'
 
-// load .env data into process.env
-// require().config();
-config();
 
 const PORT = process.env.PORT || 8020;
 const app = express();
