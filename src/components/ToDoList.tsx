@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import "./ToDoList.css";
 import axios from 'axios';
+import TodoForm from './ToDoForm';
 
 function ToDoList() {
   const [list, setList] = useState([
@@ -16,10 +17,13 @@ function ToDoList() {
     }
   ]);
 
+  const url = process.env.REACT_APP_LOCAL;
+  console.log(url, '-----');
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8040/api/todo');
+        const response = await axios.get(`${url}/api/todo`);
 
         console.log(response.data);
         setList(response.data);
@@ -36,6 +40,7 @@ function ToDoList() {
       <h3 >
         Concepts and Topics List
       </h3>
+      <TodoForm setList={setList} ></TodoForm>
       <div className="to-do-list-containers" >
 
         <div className='list-container'>

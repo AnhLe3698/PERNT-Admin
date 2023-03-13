@@ -3,6 +3,7 @@
   height: 50%;
   flex-direction: column;
   font-size: 20px;
+  padding: 20px;
 }
 
 .to-do-list-containers {
@@ -42,3 +43,6 @@
   font-size: 12px;
 }
 
+.add-form {
+  margin-bottom: 20px;
+}

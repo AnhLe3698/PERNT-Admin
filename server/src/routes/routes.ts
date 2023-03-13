@@ -15,4 +15,11 @@ router.get('/todo', (req, res) => {
   })
 })
 
+router.put('/todo', (req, res) => {
+  db.addItem(req.body.task).then((info) => {
+    res.send(info);
+  })
+})
+
+
 export default router;
