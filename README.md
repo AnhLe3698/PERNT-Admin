@@ -15,8 +15,10 @@ Add the folloding to the .env file and adjust accordingly
 ```
 
 PORT=portnumber-8080
+REACT_APP_LOCAL=url_of_choice_or_localhost_and_port
 
 ```
+example: REACT_APP_LOCAL=http://localhost:3000
 
 Run the React Client
 ```sh
