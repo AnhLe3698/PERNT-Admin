@@ -36,11 +36,11 @@ Add the folloding to the .env file and adjust accordingly
 
 ```
 
-DB_HOST=localhost
-DB_USER=username
-DB_PASS=password
-DB_NAME=dn_name
-DB_PORT=db_port
+PGHOST=localhost
+PGUSER=username
+PGPASSWORD=password
+PGDATABASE=db_name
+PGPORT=db_port
 PORT=portnumber-8040
 
 ```
