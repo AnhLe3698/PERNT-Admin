@@ -44,5 +44,23 @@ export default {
     .catch((err) => {
       console.log(err.message);
     });
+  },
+
+  deleteItem: (name: string) => {
+    return db.query(`
+      DELETE FROM list WHERE name = $1;
+    `, [name])
+    .then(() => {
+      return db.query(`
+        SELECT * FROM list;
+      `);
+    })
+    .then((res) => {
+      console.log(res.rows);
+      return res.rows;
+    })
+    .catch((err) => {
+      console.error(err.message);
+    });
   }
 }

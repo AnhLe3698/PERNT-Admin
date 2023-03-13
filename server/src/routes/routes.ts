@@ -30,4 +30,12 @@ router.put('/todo/complete', (req, res) => {
 })
 
 
+router.delete('/todo/:name', (req, res) => {
+  const name = req.params.name;
+  db.deleteItem(name).then((info) => {
+    
+    res.send(info);
+  })
+});
+
 export default router;
