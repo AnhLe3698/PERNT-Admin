@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   res.send('YoYoApi');
 })
 
-router.get('/test', (req, res) => {
+router.get('/todo', (req, res) => {
   
   db.listAll().then((info) => {
     res.send(info)

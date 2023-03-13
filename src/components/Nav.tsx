@@ -8,9 +8,9 @@ import "./Nav.css";
 function Nav() {
   
   return (
-    <div className="Nav">
+    <div className="nav">
        <nav>
-        <ul>
+        <ul className='nav-list'>
           <li>
             <Link to="/" >Home</Link>
           </li>
