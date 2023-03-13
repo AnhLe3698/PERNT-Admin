@@ -14,7 +14,17 @@
 .list-container {
   width: 45%;
   padding-left: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  transition: box-shadow 0.3s ease-in-out;
 }
+
+.list-container:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
 
 #vertical {
   list-style: square;
@@ -23,12 +33,12 @@
 }
 
 .column-one-incomplete{
-  width: 30%;
+  width: 60%;
   font-size: 12px;
 }
 
 .column-two-complete {
-  width: 30%;
+  width: 60%;
   font-size: 12px;
 }
 
