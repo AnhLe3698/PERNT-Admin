@@ -1,6 +1,6 @@
 # PERNT Stack Learning Checklist
 
-A simple application to highlight the principles of typescript in a PERN stack Full stack APP
+A simple application to highlight the principles of ReactJS, Typescript, NodeJS,  PosgreSql, Express, 
 
 ## Client setup
 

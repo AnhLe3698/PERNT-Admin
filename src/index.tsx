@@ -13,6 +13,7 @@ const root = ReactDOM.createRoot(
 
 
 root.render(
+  //Browser Router visible to the entire app
   <BrowserRouter>
     <App></App>
   </BrowserRouter>

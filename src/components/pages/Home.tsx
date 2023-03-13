@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import ToDoList from './ToDoList';
+import ToDoList from './list/ToDoList';
 
 function Home() {
   return (
