@@ -1,6 +1,6 @@
 # PERNT Stack Learning Checklist
 
-A simple application of the principles of typescript in a PERN stack APP
+A simple application to highlight the principles of typescript in a PERN stack Full stack APP
 
 ## Client setup
 
