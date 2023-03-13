@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import "./ToDoList.css";
 import axios from 'axios';
 import TodoForm from './ToDoForm';
+import CompleteButton from './CompleteButton';
 
 function ToDoList() {
   const [list, setList] = useState([
@@ -18,8 +19,7 @@ function ToDoList() {
   ]);
 
   const url = process.env.REACT_APP_LOCAL;
-  console.log(url, '-----');
-
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -35,6 +35,10 @@ function ToDoList() {
     fetchData();
   }, []);
 
+  function onComplete(data: []) {
+    setList(data)
+  };
+
   return (
     <div className="to-do-list">
       <h3 >
@@ -49,7 +53,7 @@ function ToDoList() {
           </h5>
           <ul className='column-one-incomplete' id='vertical'>
             {list.filter(item => item.completion === false).map((item) => (
-              <li key={item.id}>{item.name}</li>
+              <li className="list-item" key={item.id}>{item.name} <CompleteButton name={item.name} onComplete={onComplete}></CompleteButton></li>
             ))}
           </ul> 
         </div>
@@ -60,7 +64,7 @@ function ToDoList() {
           </h5>
           <ul className='column-two-complete' id='vertical'>
             {list.filter(item => item.completion === true).map((item) => (
-              <li key={item.id}>{item.name}</li>
+              <li className="list-item" key={item.id}>{item.name} <CompleteButton name={item.name} onComplete={onComplete}></CompleteButton></li>
             ))}
           </ul>  
         </div>

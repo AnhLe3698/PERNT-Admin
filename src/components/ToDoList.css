@@ -46,3 +46,14 @@
 .add-form {
   margin-bottom: 20px;
 }
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.completion-button {
+  font-size: 8px;
+}

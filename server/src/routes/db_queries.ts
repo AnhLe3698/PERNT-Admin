@@ -29,5 +29,20 @@ export default {
     .catch((err) => {
       console.log(err.message);
     });
+  },
+
+  updateItem: (name) => {
+    return db.query(`
+      UPDATE list
+      SET completion = TRUE
+      WHERE name = $1
+    `, [name])
+    .then((res) => {
+      console.log(res.rowCount + " rows updated"); // Print the number of rows updated
+      return res.rowCount;
+    })
+    .catch((err) => {
+      console.log(err.message);
+    });
   }
 }

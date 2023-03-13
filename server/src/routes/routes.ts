@@ -21,5 +21,13 @@ router.put('/todo', (req, res) => {
   })
 })
 
+router.put('/todo/complete', (req, res) => {
+  db.updateItem(req.body.name).then(() => {
+    db.listAll().then((info) => {
+      res.send(info)
+    })
+  })
+})
+
 
 export default router;
